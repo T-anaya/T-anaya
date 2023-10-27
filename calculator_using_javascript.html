@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type ="text/css" href="css/bootstrap.css">
+    <style type="text/css">
+        #container{
+            height: 300px;
+            width: 30%;
+            background-color: skyblue;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+            border: 2px double gray solid;
+        }
+        </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Calculator</h2> 
+        <p><input type="text" id="num1" class="form-control" placeholder="Num1"></p>
+        <p><input type="text" id="num2"class="form-control" placeholder="Num2"></p>
+        <button onclick="add()" class="btn btn-success">Add</button>
+        <button onclick="sub()" class="btn btn-success">Sub</button>
+        <button onclick="div()" class="btn btn-success">Div</button>
+        <button onclick="multi()" class="btn btn-success">Multi</button>
+        <div class = "alert alert-primary mt-2" role="alert" id="op">
+            Enter Number
+    </div>
+    <script type="text/javascript">
+         num1 = document.getElementById('num1');
+         num2 = document.getElementById('num2');
+         op = document.getElementById('op');
+
+         function add() {
+            res = parseInt(num1.value)+parseInt(num2.value);
+            op.innerHTML = "Addition is :"+res;
+         }
+         function sub() {
+            res = parseInt(num1.value)-parseInt(num2.value);
+            op.innerHTML = "Subtraction is :"+res;
+         }
+         function div() {
+            res = parseInt(num1.value)/parseInt(num2.value);
+            op.innerHTML = "Division is :"+res;
+         }
+         function multi() {
+            res = parseInt(num1.value)*parseInt(num2.value);
+            op.innerHTML = "Multiplication is :"+res;
+         }
+    </script>
+       
+
+</body>
+</html>
